@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Wordle -Find word of the day</title>
+        <script src="https://cdn.tailwindcss.com"></script>        
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <style>
+            .result
+            {
+                border: solid 1px  black;
+                background-color: greenyellow;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        </style>
+
+<div class="bg-indigo-600">
+    <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between flex-wrap  text-center">
+        <div class="w-0 flex-1 flex items-center">            
+          <p class="ml-10 font-medium text-white truncate">            
+            <span class="hidden md:inline">
+                Wordle : Find word of the day
+            </span>
+          </p>
+        </div>        
+        
+      </div>
+    </div>
+  </div>
+<!--   
+       <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+        Wordle : Find word of the day
+      </p> -->
+       <!-- <h1 class="text-5xl font-medium leading-tight mt-0 mb-2 text-blue-600 text-center">Wordle : Find word of the day</h1>  -->
+       <div class="flex lg:flex-row flex-col items-center py-8 px-4">
+     
+        <div class="flex flex-col lg:mr-16">
+            <label for="day" class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2">Day</label>
+            <input id="day" type="number" autocomplete="off" class="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"/>
+        </div>        
+        <div class="flex flex-col lg:mr-16">
+            <label for="month" class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2">Month</label>
+            <input id="month" type="number" autocomplete="off" class="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"/>
+        </div>        
+        <div class="flex flex-col lg:mr-16">
+            <label for="year" class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2">Year</label>
+            <input id="year" type="number" autocomplete="off" class="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"/>
+        </div>  
+        <button type="button" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md" onclick="getWordleOfDay()">View Wordle</button>      
+    </div>
+
+      
+        <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-gray-50 to-gray-100 p-10">
+            <div class="flex justify-center">
+                <!-- <label for="day">Day</label>
+                <input id="day" type="number"/>
+                <label for="month">Month</label>
+                <input id="month" type="number"/>
+                <label for="year">Year</label>
+                <input id="year" type="number"/> -->
+                <!-- <button type="button" class="px-4 py-2 font-semibold text-sm bg-cyan-500 text-white rounded-full shadow-sm"  onclick="getWordleOfDay()" >View Wordle</button> -->
+                <!-- <button type="button" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md" onclick="getWordleOfDay()">View Wordle</button> -->
+                
+            </div>
+            <blockquote class="text-2xl font-semibold italic text-center text-gray-900">            
+                <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+                  <span class="relative text-white" id="result"></span>
+                </span>            
+              </blockquote>
+          </div>                        
+        <script>
+            (function(){autoFillCurrentDetails();})()
+        </script>
+    </body>
+</html>
